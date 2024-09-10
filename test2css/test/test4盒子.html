@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Box</title>
+  <!--
+  显示模式：
+    display：显示模式，改变盒子的默认显示模式
+      block
+        加宽高生效，独占一行：div
+      inline-block
+        加宽高生效，不换行：img
+      inline（不常用）
+        加宽高不生效，不换行：span
+  盒子：
+    width：宽度
+    height：高度
+    border：数字+px color 边框类型，添加边框
+      solid实线，dashed虚线，dotted点线，double双实线，groove凹槽线，ridge凸槽线，inset凹线，outset凸线
+    padding：内边距（盒子与内容的距离）
+      填一个值，四边都生效
+      填两个值，对应上下、左右
+      填三个值，对应上、左右、下
+      填四个值，分别对应上、右、下、左
+    margin：外边距（与盒子之间的距离）
+      值与padding一致
+      auto，同时给width和margin:0 auto，盒子居中
+      上下盒子都有margin，取较大值
+      给子盒子加margin-top，父盒子会一起向下移动，解决方法：
+        1、取消子盒子的margin，给父盒子加padding（推荐）
+        2、父盒子设置overflow:hidden
+        3、父盒子设置border-top
+    border-radius：px或%
+      想让正方形变成圆形，长方形变成胶囊形状 ，就写50%
+    box-shadow：x偏移量 y偏移量 模糊半径 扩散半径 颜色 内外阴影
+      inset内阴影，默认外阴影
+    -方位，指定盒子的哪边
+      left，right，top，bottom
+    box-sizing：盒子模型，改变盒子的默认模型
+      border-box，指定的width和height包括内边距
+      否则添加border、padding、margin都会放大盒子
+
+  特殊的span：
+    加padding和margin只有水平方向生效，解决方法：
+      设置line-height:高度
+  -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      border-radius: 10px;
+    }
+
+    body {
+      text-align: center;
+    }
+
+    .box1 {
+      width: 300px;
+      height: 100px;
+      background-color: #5d3939;
+      display: inline-block;
+    }
+
+    .box6 {
+      width: 100px;
+      height: 300px;
+      background-color: #ac6b79;
+      display: inline-block;
+    }
+
+    .box2 {
+      width: 100px;
+      height: 100px;
+      background-color: #1c9f20;
+      display: inline-block;
+    }
+
+    .box3 {
+      width: 200px;
+      height: 200px;
+      background-color: #dc0b0b;
+      display: inline-block;
+    }
+
+    .box4 {
+      width: 100px;
+      height: 200px;
+      background-color: #4cc5de;
+      display: inline-block;
+    }
+
+    .box5 {
+      width: 200px;
+      height: 100px;
+      background-color: #f7b01e;
+      display: inline-block;
+    }
+
+    .img {
+      display: inline-block;
+    }
+
+    .b {
+      width: 100px;
+      height: 100px;
+      border-left: #1c9f20 5px solid;
+      border-bottom: #11ece5 8px solid;
+      border-top: #ff7531 1px solid;
+      border-right: #e5d51d 9px solid;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    img {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #11ece5;
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
+
+    .font1 {
+      font-size: 20px;
+    }
+
+    .font2 {
+      font-size: 30px;
+    }
+
+    .border1 {
+      border: 1px solid #5d3939;
+      background-color: darkgray;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    .border2{
+      width: 300px;
+      border: 1px solid #eadf72;
+      background-color: #ac6b79;
+      margin: 0 auto;
+      padding: 10px;
+    }
+
+  </style>
+</head>
+<body>
+<div>
+<span class="img">
+  <span class="box2">box2</span>
+  <span class="box5">box5</span>
+  <br>
+  <span class="box4">box4</span>
+  <span class="box3">box3</span>
+</span>
+  <span class="box6">box6</span>
+  <br>
+  <span class="box1">box1</span>
+  <span class="box2">box2</span>
+</div>
+<hr>
+<div class="b">
+  <span>ou der, ou der</span>
+
+</div>
+<div class="border1">
+  <div class="border2">
+    <div><img src="/file/1.png" alt=""></div>
+    <div class="font2">Beautiful Stone</div>
+    <div class="font1">stone</div>
+  </div>
+</div>
+</body>
+</html>

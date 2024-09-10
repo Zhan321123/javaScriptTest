@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>相对固定与绝对固定</title>
+  <!--
+  相对位置与绝对位置
+    用于脱标的元素排布
+  position:
+    relative：相对位置
+      结合absolute使用用于元素相对显示
+    absolute：绝对位置
+      用于居中弹窗
+    fixed：固定位置，不随滚动条滚动，始终在固定位置显示
+      用于固定的广告
+  可配置属性：
+    top、right、bottom、left: 数值
+      偏移量，当定义为相对relative，就是相对于自身的偏移
+      当absolute，就是相对于定义了相对位置的父元素的偏移
+  用法技巧
+    偏移显示：
+      给父元素定义为relative，子元素定义为absolute，然后定义2个方向的偏移量
+    居中弹窗
+      给元素定义为absolute，然后定义left、top为50%
+      然后使用相对自身移动：transform: translate(-50%, -50%)
+  -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .b1 {
+      width: 200px;
+      height: 200px;
+      background-color: #4cc5de;
+      position: relative;
+      left: 100px;
+      top: 50px;
+    }
+
+    .b2 {
+      width: 300px;
+      height: 400px;
+      background-color: #ac6b79;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .b2 img {
+      width: 100%;
+      height: 75%;
+    }
+
+    .b2 h4 {
+      margin: 20px 30px;
+    }
+
+    .b2 span {
+      width: 120px;
+      padding: 6px 14px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .box3 {
+      width: 400px;
+      height: 300px;
+      background-color: #479a8b;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      top: 100px;
+      left: 50%;
+
+      transform: translate(-50%, 0);
+    }
+
+    .box3 h3 {
+      padding: 40px 0;
+    }
+
+    .box3 div {
+      width: 60%;
+      height: 20%;
+    }
+
+    .box3 div button {
+      background-color: #ac6b79;
+      width: 70px;
+      height: 30px;
+      border-radius: 6px;
+      border: #8d92a9 3px solid;
+    }
+    .box4{
+      width: 100%;
+      height: 10%;
+      position: fixed;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+<div class="b1"></div>
+<div style="width: 300px;height: 300px;
+      background-color: #e5d51d;"></div>
+<hr>
+<div class="b2">
+  <img src="/file/7.png" alt="">
+  <span>2018-09-01</span>
+  <h4>新的活动好好好Kobe Man, what can I say?</h4>
+</div>
+<hr>
+<div class="box3">
+  <h3>是否加入中国共产党?</h3>
+  <div>
+    <button style="float: left">Yes</button>
+    <button style="float: right">No</button>
+  </div>
+</div>
+<hr>
+<div class="box4">
+  <p>这里是广告、广告、广告、广告、广告、广告、广告、广告、
+    广告、广告、广告、广告、广告、广告、广告、广告、广告、
+    广告、广告、广告、广告、广告、广告、广告、广告、广告、
+    广告、广告、广告、广告、广告、广告、广告、广告、广告、
+    广告、广告、广告、广告、广告、广告、广告、广告、广告</p>
+</div>
+</body>
+</html>

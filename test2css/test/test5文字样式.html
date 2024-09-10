@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Word Style</title>
+  <!--
+  文字属性
+    font-size: 字号，大小
+    font-weight: 字体粗细
+      bold or 700：加粗
+      normal or 400：正常
+    font-style: 字体倾斜
+      italic：倾斜
+      normal：正常
+    line-height: 行高，一行文字的高度（或者上行文字的顶部到下行文字的顶部）
+      如果是数字，就是字高的倍数
+      如果是数字+px，就是像素
+    font-family: 字体
+      用“，”隔开，浏览器会从左到右依次寻找，找到第一个存在的字体，就用这个字体
+      最后一个用sans-serif无衬线字体
+      一般从中文网页上直接复制该属性
+    text-indent: 首行缩进
+      数字+em，1em=1个字的像素数（常用）
+      数字+px，缩进的像素格数
+    text-align: 文字对齐方式
+      left：左对齐（默认）
+      right：右对齐
+      center：居中对齐
+    text-decoration: 修饰线
+      none：无修饰线（默认），一般用于超链接去除下划线
+      underline：下划线
+      overline：上划线
+      line-through：删除线
+    color: 颜色
+      颜色名写法：blue、red、yellow...
+      rgb写法：rgb(0-255,0-255,0-255)
+      rgba写法：rgba(0-255,0-255,0-255,0-1)
+      16进制写法：#rrggbb
+    font: 综合属性，将几个字体属性放在一起
+      font:是否倾斜 是否加粗 字号/行高 字体
+      一般用于网页开发初期默认字体
+
+  -->
+  <style>
+    .font1 {
+      font-size: 20px;
+      font-weight: bold;
+      font-style: italic;
+      line-height: 3;
+      font-family: Microsoft YaHei, sans-serif;
+      text-indent: 2em;
+      text-align: left;
+      text-decoration: #dc0b0b underline;
+      color: blueviolet;
+    }
+
+    /*
+    文字上下居中技巧
+    设置 height 和 (line-height*行数) 一样高
+    */
+    .font2 {
+      font: bold 20px/3 serif;
+      background-color: #4cc5de;
+      height: 100px;
+      line-height: 100px;
+    }
+  </style>
+</head>
+<body>
+<p class="font1">20号大小，bold加粗，italic斜体，<br>
+  3倍行距，serif字体，2个字缩进，左对齐</p>
+<p class="font2">20号，加粗，3倍行距，serif字体</p>
+</body>
+</html>

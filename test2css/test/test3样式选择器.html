@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chooser</title>
+  <!--
+  属性选择器
+  1、标签名
+    style中<标签名> {}
+    修改所有该标签的样式
+  2、class
+    style中，.名字 {}
+    body中<标签 class="名字"> {}
+    修改所有该class的标签的样式
+    使用多个class时，用空格分割<标签 class='class1 class2...'>
+  3、id
+    style中，#名字 {}
+    body中<标签 id="名字"> {}
+    修改一个id的标签的样式，id不能给一个标签使用
+  4、*
+    style中，* {}
+    修改所有标签的样式
+  -->
+  <style>
+    p {
+      color: blue;
+    }
+
+    .red {
+      color: red;
+    }
+
+    .size {
+      font-size: 20px;
+    }
+
+    #yellow {
+      color: #756e1f;
+    }
+
+    * {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div>I am a div.</div>
+<div class="red">I am also a div. But I am red class.</div>
+<p class="red size">I am a paragraph. And I am also red class.</p>
+<p id="yellow">I am a paragraph. And I am yellow id.</p>
+
+</body>
+</html>

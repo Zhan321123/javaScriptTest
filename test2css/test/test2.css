@@ -1,0 +1,10 @@
+@charset "utf-8";
+/*
+css外部书写位置
+写法与内部相同
+*/
+h3{
+    text-align: center;
+    color: purple;
+    font-size: 20px;
+}

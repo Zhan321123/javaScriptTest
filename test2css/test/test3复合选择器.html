@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>复合选择器</title>
+  <!--
+  复合选择器
+    后代选择器
+      label1 label2{}
+      所有后代都改变
+    子代选择器
+      label1 > label2{}
+      只改变子代
+    并集选择器
+      label1, label2, ...{}
+      设置标签相同的样式
+    交集选择器
+      label.class{}
+  -->
+  <style>
+    div span {
+      color: blueviolet;
+    }
+
+    div > span {
+      color: #ac6b79;
+    }
+
+    h1,h2{
+      color: #1c9f20;
+    }
+    h3.box{
+      color: #4cc5de;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <span>
+    I am son span.
+    <span>I am grandson span.</span>
+  </span>
+</div>
+<h1>I am the biggest head.</h1>
+<h2>I am second-biggest head.</h2>
+<h3 class="box">I am third-biggest head.</h3>
+<h4 class="box">I am third-smallest head.</h4>
+</body>
+</html>

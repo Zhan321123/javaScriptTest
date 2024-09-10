@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>News</title>
+  <style>
+    * {
+      margin: 0 auto;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      text-align: center;
+      color: black;
+    }
+
+    a {
+      line-height: 24px;
+      text-decoration: none;
+      color: rgba(72, 72, 72, 0.85);
+    }
+    a::before{
+      content: url("/file/5.png");
+      padding-right: 10px;
+    }
+
+    a:hover {
+      color: #ff7531;
+    }
+
+    .b1 {
+      width: 300px;
+      height: 40px;
+      background-color: #e0e0e0;
+      text-align: left;
+      padding: 1px 0px 0px 0px;
+      box-shadow: #a9a9a9 0px 0px 5px;
+      border: #4cc5de 1px solid;
+      margin-top: 20px;
+      border-left: none;
+    }
+
+    .b2 {
+      width: 300px;
+      background-color: #ffffff;
+      text-align: left;
+      padding: 5px 5px 5px 30px;
+      border: #efefef solid 1px;
+      box-shadow: #a9a9a9 0px 0px 5px;
+    }
+    .new{
+      color: #001fff;
+      padding: 10px 20px;
+      line-height: 37px;
+      background-color: #ffffff;
+      border-top: #7e4300 solid 2px;
+      border-right: #4cc5de 1px solid;
+    }
+    .new::before{
+      content: none;
+    }
+    li{
+      color: #dc620b;
+    }
+  </style>
+</head>
+<body>
+<div class="b1">
+  <a class="new">新闻</a>
+</div>
+<div class="b2">
+  <ul>
+    <li><a href="#">Java之父：余胜军</a></li>
+    <li><a href="#">Mysql是什么</a></li>
+    <li><a href="#">Python用来做什么</a></li>
+    <li><a href="#">Css可以做什么</a></li>
+    <li><a href="#">JavaScript有什么用</a></li>
+    <li><a href="#">Html好用吗</a></li>
+  </ul>
+</div>
+</body>
+</html>

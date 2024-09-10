@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>轮播页面</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .banner {
+      background-color: #ac6b79;
+      margin: 0 auto;
+      width: 285px;
+      height: 317px;
+      /*overflow: hidden;*/
+      position: relative;
+    }
+
+    .banner img {
+      width: 285px;
+      height: 317px;
+      border-radius: 12px;
+      vertical-align: middle;
+    }
+
+    .banner ul {
+      display: flex;
+    }
+
+    .banner a {
+      width: 20px;
+      height: 30px;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: #ffffff;
+      top: 50%;
+      transform: translateY(-50%);
+      text-decoration: none;
+      line-height: 30px;
+      text-align: center;
+    }
+
+    .left {
+      left: 0;
+      position: absolute;
+      border-radius: 0 12px 12px 0;
+      display: none;
+    }
+
+    .right {
+      right: 0;
+      position: absolute;
+      border-radius: 12px 0 0 12px;
+      display: none;
+    }
+
+    .banner:hover .left,
+    .banner:hover .right {
+      display: block;
+    }
+
+    .banner ol {
+      height: 14px;
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #7e7e7e;
+    }
+    .banner ol li {
+      margin: 0 5px;
+      height: 10px;
+      width: 10px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .banner ol .active {
+      background-color: #ac6b79;
+    }
+  </style>
+</head>
+<body>
+<div class="banner">
+  <ul>
+    <li><a href="#"><img src="/file/spirit.jpg" alt=""></a></li>
+    <li><a href="#"><img src="/file/spirit.jpg" alt=""></a></li>
+    <li><a href="#"><img src="/file/spirit.jpg" alt=""></a></li>
+  </ul>
+  <a href="#" class="left"><</a>
+  <a href="#" class="right">></a>
+  <ol>
+    <li><a href="#"></a></li>
+    <li class="active"><a href="#"></a></li>
+    <li><a href="#"></a></li>
+  </ol>
+</div>
+</body>
+</html>

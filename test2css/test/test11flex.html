@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flex</title>
+  <!--
+  弹性盒子：
+    display:flex
+  特性：（父盒子叫弹性容器，子盒子叫弹性盒子）
+    盒子都会自动拉伸和压缩
+    盒子只在一行排列，空间不够就会自动压缩，指定width也无效
+  可配置属性：
+    justify-content:盒子排列方式
+      flex-start：盒子从左往右排列，盒子之间无空隙
+      flex-end：盒子从右往左排列，盒子之间无空隙
+      center：盒子居中排列，盒子之间无空隙
+      space-between：盒子之间空隙均匀，盒子左右紧贴容器
+      space-around：盒子之间空隙均匀，每个盒子的margin一致
+      space-evenly：盒子之间空隙均匀，左右空隙与之一致
+    align-items（用在容器）/align-self（用在盒子）:盒子侧轴对齐方式
+      center：盒子侧轴居中
+      stretch：盒子拉伸到容器大小（默认）
+      flex-start：盒子侧轴从顶部对齐（默认）
+      flex-end：盒子侧轴从底部对齐
+    flex-direction:盒子主轴方向
+      row：从左往右排列（默认）
+      row-reverse：从右往左排列
+      column：从上往下排列
+      column-reverse：从下往上排列
+    flex:数字：弹性盒子的宽度比例，可用nth指定每个盒子的宽度比例
+    flex-wrap:nowrap/wrap/wrap-reverse：盒子是否换行
+  -->
+  <style>
+    body {
+      text-align: center;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    li::marker {
+      content: none;
+    }
+
+    li {
+      width: 200px;
+      height: 200px;
+      background-color: #313131;
+      border: #b7ff00 1px solid;
+      /*display: flex;*/
+      float: left;
+    }
+
+    .box {
+      width: 700px;
+      height: 300px;
+      background-color: #7e4300;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row-reverse;
+    }
+
+    .box div {
+      width: 100px;
+      height: 100px;
+      background-color: #ac6b79;
+      border: #0fe534 1px solid;
+    }
+
+    .box div:nth-child(2n) {
+      align-self: flex-end;
+    }
+
+    .box2{
+      height: 200px;
+      background-color: #39988f;
+      display: flex;
+    }
+
+    .box2 div{
+      /*width: 62px;*/
+      background-color: #4cc5de;
+      border: #001fff 1px solid;
+      flex: 1;
+    }
+    .box2 div:nth-child(2){
+      flex: 4;
+    }
+    .box3{
+      width: 500px;
+      height: 700px;
+      background-color: #ac6b79;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .box3 div{
+      margin: 10px;
+      width: 124px;
+      height: 200px;
+      background-color: #756e1f;
+      border: #0fe534 1px solid;
+    }
+  </style>
+</head>
+<body>
+<div style="overflow: hidden">
+  <ul style="background-color: #a1a1a1">
+    <li>first item</li>
+    <li>second item</li>
+    <li>third item</li>
+    <li>fourth item</li>
+    <li>fifth item</li>
+    <li>sixth item</li>
+  </ul>
+</div>
+<hr>
+<div class="box">
+  <div>1 div</div>
+  <div>2 div</div>
+  <div>3 div</div>
+  <div>4 div</div>
+  <div>5 div</div>
+  <div>6 div</div>
+</div>
+<hr>
+<div style="
+    width: 124px;
+    height: 200px;
+    border: #11ece5 1px solid;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+">
+  <img src="/file/8.png" alt="">
+  <span style="line-height: 2">stone</span>
+</div>
+<hr>
+<div class="box2">
+  <div>div 1</div>
+  <div>div 2</div>
+  <div>div 3</div>
+</div>
+<hr>
+<div class="box3">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+</div>
+</body>
+</html>

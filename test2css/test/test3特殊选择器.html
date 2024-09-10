@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>特殊选择器</title>
+  <!--
+  结构伪类选择器
+    用于匹配列表ul和ol种第n的元素
+      label: first-child，匹配第一个元素
+      label: last-child，匹配最后一个元素
+      label: nth-child(n)，匹配第n个元素，注意，从1开始！！！
+      label: nth-child(f(n))，填好fn，n ∈ N，匹配所有值的元素
+  伪类元素选择器
+
+  状态伪类选择器
+    label:状态{}
+      hover：鼠标悬停，走开取消
+      active：鼠标按下激活，松开取消
+      focus：获得焦点
+      visited：访问过
+      link：链接
+    注意：
+      遵循link-visited-hover-active的顺序，否则无法生效
+      工作中常用设置超链接的方法:
+        a:{}
+        a:hover{}
+
+  元素伪类选择器
+    label::before{}，在元素前添加内容
+    label::after{}，在元素后添加内容
+    注意：必须要有content属性，否则不会生效
+
+  -->
+  <style>
+    li:first-child {
+      background-color: #4cc5de;
+    }
+
+    li:last-child {
+      background-color: #dc0b0b;
+    }
+
+    li:nth-child(2) {
+      background-color: #e5d51d;
+    }
+
+    li:nth-child(3n) {
+      background-color: #ff7531;
+    }
+
+    h1:hover {
+      color: #4cc5de;
+    }
+
+    .box:active {
+      color: #dc0b0b;
+    }
+
+    div span::before {
+      content: url("/file/1.png");
+    }
+
+    div span::after {
+      content: '>';
+      color: #0fe534;
+    }
+
+  </style>
+</head>
+<body>
+<ul>
+  <li>first</li>
+  <li>second</li>
+  <li>third</li>
+  <li>fourth</li>
+  <li>fifth</li>
+  <li>sixth</li>
+  <li>seventh</li>
+  <li>eighth</li>
+  <li>ninth</li>
+  <li>tenth</li>
+</ul>
+
+<h1>This is a heading</h1>
+<p class="box">This is a paragraph.</p>
+
+<div>
+  <span> span </span>
+</div>
+</body>
+</html>

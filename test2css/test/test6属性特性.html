@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>属性特性</title>
+  <!--
+  1、默认情况下文字的属性直接继承父元素，除非自己有相应的样式
+  2、配置两次相同属性时，不同的会叠加，相同的会选择后者生效
+  3、属性特性的优先级：（范围越大，优先级越低）
+    继承 < * < 直接标签 < class < id < 行内样式 < !important
+    复合选择器的优先级过于复杂
+  -->
+  <style>
+    body {
+      background-color: #39988f;
+      font: 20px/1.5 "微软雅黑", sans-serif;
+    }
+
+    div {
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+
+    div {
+      background-color: #1c9f20;
+      color: #e5d51d;
+    }
+  </style>
+</head>
+<body>
+<h1>Head</h1>
+<p>paragraph</p>
+<a href="#">link</a>
+<div>
+  hello, world!
+</div>
+</body>
+</html>

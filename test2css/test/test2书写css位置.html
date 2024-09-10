@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Css Write Position</title>
+  <!--
+  css
+    书写位置1：
+      <title>下面
+      用<style>包裹
+    书写位置2：
+      外部.css文件，link到<title>下面
+      <link rel="stylesheet" href="css文件路径">
+    书写位置3：
+      body行内
+      <标签 属性=属性值...>
+  格式：
+    选择器{属性:属性值...}
+  -->
+  <style>
+    p {
+      color: red;
+      font-size: 20px;
+      background-color: yellow;
+      text-align: center;
+      width: 200px;
+      height: 100px;
+      margin: 0 auto
+    }
+  </style>
+  <link rel="styleseet" href="./test2.css">
+</head>
+<body>
+<div>
+  <h3>kobe</h3>
+</div>
+<div>
+  <p>
+    what can I say?
+    Manba out!
+    Haha.
+  </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<button class="b1">please press</button>
+<input type="text" class="i1">
+<script>
+  const b1 = document.querySelector('.b1')
+  b1.addEventListener('click', function (e) {
+    console.log(e)
+    console.log(e.type)
+    console.log(e.clientX, e.clientY)
+    console.log(e.offsetX, e.offsetY)
+  })
+
+  const i1 = document.querySelector('.i1')
+  i1.addEventListener('keyup', function (e) {
+    console.log(e)
+    console.log(e.key)
+  })
+</script>
+</body>
+</html>
