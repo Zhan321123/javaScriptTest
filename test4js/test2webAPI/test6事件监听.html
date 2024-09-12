@@ -158,7 +158,11 @@
   <text>0/100字</text>
 </div>
 <!--
-addEventListener(事件名，回调函数)
+addEventListener(事件名，function)，触发事件就会执行function，
+.addEventListener(事件名，function(event)){}，event用于更精细判断事件
+
+this 指向当前触发事件的对象
+button.addEventListener("click",function(){this.value})中的this就是当前的button对象
 
 .addEventListener("click",function) 与 .onclick = function的区别：
   addEventListener可以绑定多个事件

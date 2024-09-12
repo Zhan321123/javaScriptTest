@@ -10,6 +10,10 @@
 <body>
 <button class="b1">please press</button>
 <input type="text" class="i1">
+
+<!--
+
+-->
 <script>
   const b1 = document.querySelector('.b1')
   b1.addEventListener('click', function (e) {
@@ -19,10 +23,14 @@
     console.log(e.offsetX, e.offsetY)
   })
 
+  //传入event对象
   const i1 = document.querySelector('.i1')
   i1.addEventListener('keyup', function (e) {
     console.log(e)
     console.log(e.key)
+    if (e.key === 'Enter') {
+      alert('enter')
+    }
   })
 </script>
 </body>

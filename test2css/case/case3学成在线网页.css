@@ -71,7 +71,7 @@ button:hover {
   height: 42px;
   width: 42px;
   border: none;
-  background-image: url("/file/3.png");
+  background-image: url("/file/image/3.png");
   background-size: 100% 100%;
 }
 
@@ -96,7 +96,7 @@ button:hover {
 .box2 {
   height: 421px;
   width: 100%;
-  background-image: url("/file/7.png");
+  background-image: url("/file/image/7.png");
   background-repeat: repeat;
   display: flex;
   justify-content: center;
@@ -290,7 +290,7 @@ li::marker {
 }
 
 .box5 ul li div {
-  background-image: url("/file/3.png");
+  background-image: url("/file/image/3.png");
   height: 150px;
   display: flex;
   justify-content: center;

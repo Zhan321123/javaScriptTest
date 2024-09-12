@@ -33,6 +33,9 @@
     label::after{}，在元素后添加内容
     注意：必须要有content属性，否则不会生效
 
+  反选
+    not(选择器){}，选择这种的选择器
+    选择器1:not(选择器2){}，选择所有选择器1，但是匹配选择器2不会被选择
   -->
   <style>
     li:first-child {
@@ -60,7 +63,7 @@
     }
 
     div span::before {
-      content: url("/file/1.png");
+      content: url("/file/image/1.png");
     }
 
     div span::after {
