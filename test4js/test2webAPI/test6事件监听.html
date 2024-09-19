@@ -90,32 +90,42 @@
       width: 50px;
       border-left: 1px solid #000;
     }
+
     .search input,
     .search button {
       border: none;
       outline: none;
     }
 
-    .comment{
+    .comment {
       width: 300px;
       height: 100px;
       border: 1px solid #000;
       margin: 0 auto;
       position: relative;
     }
-    .comment textarea{
+
+    .comment textarea {
       border: none;
       outline: none;
       resize: none;
       height: 100%;
       width: 100%;
-      padding:4px;
+      padding: 4px;
     }
-    .comment text{
+
+    .comment text {
       position: absolute;
       right: 0;
       bottom: 0;
       /*display: none;*/
+    }
+
+    .resizeBox {
+      width: 300px;
+      height: 200px;
+      border: 1px solid #000;
+      margin: 0 auto;
     }
   </style>
 </head>
@@ -156,6 +166,26 @@
     <textarea placeholder="请输入评论"></textarea>
   </label>
   <text>0/100字</text>
+</div>
+<br>
+<hr>
+<!--
+innerWidth/innerHeight：内容宽高，不包含滚动条
+clientWidth/clientHeight：内容宽高，包含滚动条，不包含padding和border
+offsetWidth/offsetHeight：元素宽高包含padding和border
+offsetLeft/offsetTop：元素上边框到有位置的祖先元素距离
+-->
+<div class="resizeBox">
+  <p>
+    innerWidth:
+    <br>innerHeight:
+    <br>clientWidth:
+    <br>clientHeight:
+    <br>offsetWidth:
+    <br>offsetHeight:
+    <br>offsetLeft:
+    <br>offsetTop:
+  </p>
 </div>
 <!--
 addEventListener(事件名，function)，触发事件就会执行function，
@@ -277,24 +307,39 @@ button.addEventListener("click",function(){this.value})中的this就是当前的
   input.addEventListener("blur", function () {
     search.style.border = "1px solid #000"
   })
-  input.addEventListener("input",function (){
+  input.addEventListener("input", function () {
     console.log(input.value)
   })
 </script>
 <script>
   const textarea = document.querySelector('.comment textarea')
   const text = document.querySelector('.comment text')
-  textarea.addEventListener("focus", function (){
-    text.style.display="block"
+  textarea.addEventListener("focus", function () {
+    text.style.display = "block"
   })
   textarea.addEventListener("blur", function () {
-    text.style.display="none"
+    text.style.display = "none"
   })
   textarea.addEventListener("input", function () {
     if (textarea.value.length > 100) {
       textarea.value = textarea.value.slice(0, 100)
     }
     text.innerHTML = textarea.value.length + '/100字'
+  })
+</script>
+<script>
+  const resizeP = document.querySelector('.resizeBox p')
+  window.addEventListener('resize', function () {
+    resizeP.innerHTML = `
+    innerWidth: ${window.innerWidth}
+    <br>innerHeight: ${window.innerHeight}
+    <br>clientWidth: ${document.documentElement.clientWidth}
+    <br>clientHeight: ${document.documentElement.clientHeight}
+    <br>offsetWidth: ${document.documentElement.offsetWidth}
+    <br>offsetHeight: ${document.documentElement.offsetHeight}
+    <br>offsetLeft: ${document.documentElement.offsetLeft}
+    <br>offsetTop: ${document.documentElement.offsetTop}
+    `
   })
 </script>
 </body>
